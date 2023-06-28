@@ -27,6 +27,7 @@ The installation time is approximately x minute.
 #### 3.1.1 How to run the software to synthesis images
 To run the software on the data, run the following command in the matlab terminal:
 ```matlab
+cd ./synthesis_images
 main.m
 ```
 
