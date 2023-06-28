@@ -1,0 +1,9 @@
+pytorch 1.8
+cuda 10.2
+opencv
+glob
+natsort
+pillow
+numpy
+scikit-image
+torchvision
