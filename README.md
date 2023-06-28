@@ -2,10 +2,10 @@
 
 
 ## 1. System requirements
-### 1.1 All software dependencies and operating systems (including version numbers)
-The project has been tested on Windows 10 and Ubuntu 18.04.1 LTS (xxx).
+### 1.1 All software dependencies and operating systems
+The project has been tested on Windows 10 and Ubuntu 18.04.1 LTS.
 ### 1.2 Versions the software has been tested on
-The project has been tested on Python x.x.x and matlab 2022a.
+The project has been tested on Python 3.7 and matlab 2022a.
 ### 1.3 Any required non standard hardware
 There is no non-standard hardware required for this project. 
 
@@ -20,21 +20,34 @@ git clone https://github.com/bianlab/single-photon.git
 ```
     
 ### 2.2 Typical install time on a "normal" desk top computer 
-The installation time is approximately x minute.
+The installation time is approximately 1 minute and fluctuates depending on network conditions.
 
 ## 3. Demo
 ### 3.1 Instructions to run on data
-#### 3.1.1 How to run the software to synthesis images
+#### 3.1.1 How to run the software to synthesize images
 To run the software on the data, run the following command in the matlab terminal:
 ```matlab
 cd ./synthesis_images
 main.m
 ```
 
+#### 3.1.2 How to run the software to enhance the SPAD array images
+First, follow the requirements in the `requirements.txt` file to build the running environment, and only after the environment is built can you run the SPAD array image enhancement code.
+We have provided some test cases in the `testdata` folder, to enhance them, first go to the Gated_Fusion_Transformer directory,
+```
+cd ./Gated_Fusion_Transformer
+```
+Next, open the ` test.ipynb`  file using jupyter notebook and run the code line by line. If your environment is installed correctly, the enhanced results will be output in the ` . /testdata/` output folder.
+```
+source activate <your environment name>
+jupyter notebook
+```
+
+
 ### 3.2 Expected output
 
 #### 3.2.1 Expected output for the synthesis images 
-The synthesis images are saved in the folder 'output/test' as 'xmW_yframes_z.tiff' where x is the power of the laser, y is the number of frames, and z is the number of the image in the sequence. Here are example synthetic images at 20mW, composed of 32 frames and 256 frames respectively:
+The synthesis images are saved in the folder 'output/test' as 'xmW_yframes_z.tiff' where x is the power of the laser, y is the number of frames, and z is the number of the image in the sequence. Here are example synthesis images at 20mW, composed of 32 frames and 256 frames respectively:
 
 
 
@@ -58,8 +71,15 @@ The output is displayed in the terminal:
 ......
 ```
 where the first number is the number of frames, and the second number is the PSNR value compared to the ground truth.
+
+#### 3.2.2 Expected output for the enhanced SPAD array images
+Here, we default you to use anaconda to manage your deep learning environment.
+We provide a pre-trained model in the `. /model_zoo/super_resolution/` folder , which is automatically called by the algorithm. After running the code, you will get the enhanced result as shown in the figure below.
+
+![图片1](./images/figure5.png)
+
 ### 3.3 Expected run time for demo on a "normal" desktop computer
-The expected run time is approximately x minute.
+The estimated time it takes to synthesize an image is typically around 0.5 seconds and can vary depending on the device. The estimated time it takes to enhance an image is typically around 0.2 second and can also vary depending on the device.
 
 ## 4. Instructions for use
 ### 4.1 How to run the software on your data to synthesize images
