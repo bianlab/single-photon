@@ -1,4 +1,5 @@
-# Large-scale high-resolution single-photon imaging
+# High-resolution single-photon imaging with physics-informed deep learning
+
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.8260069.svg)](https://doi.org/10.5281/zenodo.8260069)
 
