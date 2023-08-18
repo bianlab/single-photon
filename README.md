@@ -1,6 +1,6 @@
 # Large-scale high-resolution single-photon imaging
 
-[DOI](https://doi.org/10.5281/zenodo.8260069)
+[DOI](https://img.shields.io/badge/https://doi.org/10.5281/zenodo.8260069)
 ## 1. System requirements
 ### 1.1 All software dependencies and operating systems
 The project has been tested on Windows 10 and Ubuntu 18.04.1 LTS.
